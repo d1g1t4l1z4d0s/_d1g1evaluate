@@ -12,7 +12,8 @@ const leagues_1 = __importDefault(require("./leagues"));
 const authenticate_1 = require("./middlewares/authenticate");
 const app = (0, express_1.default)();
 app.set('port', config_1.default.port);
-app.use((0, morgan_1.default)('dev'));
+if (config_1.default.node_env === 'development')
+    app.use((0, morgan_1.default)('dev'));
 app.use((0, cors_1.default)({
     origin: ['https://d1g1t4l1z4d0s.github.io/d1g1evaluate/']
 }));
