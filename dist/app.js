@@ -15,7 +15,7 @@ app.set('port', config_1.default.port);
 if (config_1.default.node_env === 'development')
     app.use((0, morgan_1.default)('dev'));
 app.use((0, cors_1.default)({
-    origin: ['https://d1g1t4l1z4d0s.github.io/d1g1evaluate/']
+    origin: ['https://d1g1t4l1z4d0s.github.io']
 }));
 app.use(express_1.default.json());
 app.use('/api/leagues', authenticate_1.authenticate, leagues_1.default);
